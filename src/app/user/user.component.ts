@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { DUMMY_USERS } from '../dummy-users';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -8,5 +7,10 @@ import { DUMMY_USERS } from '../dummy-users';
   styleUrl: './user.component.scss'
 })
 export class UserComponent {
-  user = DUMMY_USERS[0]
+  @Input({required: true}) avatar!: string; // This is a required input
+  @Input() name!: string;
+
+  get userAvatar() {
+    return 'assets/users/' + this.avatar;
+  }
 }

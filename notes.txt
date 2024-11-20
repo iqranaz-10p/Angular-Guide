@@ -1,0 +1,27 @@
+creating a component 
+
+@Component({
+    selector: 'app-header',                 --> component selector
+    templateUrl: './header.component.html', --> template
+    standalone: true,
+    styleUrl: './header.component.scss'     
+})
+
+export class HeaderComponent {
+  --> data and methods inside 
+}
+
+
+[src] = "imagePath" --> attribute binding
+
+attribute and property are different things, HTML attributes vs DOM properties --> 
+
+ANgular's change detection mechanism uses zone.js (older) and after v16 uses signals
+to get value of the signals use it as function().name --> doesn't need to check change everywhere
+imagePath = computed (()=> function) --> can be used instead of getters incase of changes etc
+now it will be called as imagePath()
+
+@Input() @Component --> decorators
+
+
+
