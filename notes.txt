@@ -22,6 +22,9 @@ imagePath = computed (()=> function) --> can be used instead of getters incase o
 now it will be called as imagePath()
 
 @Input() @Component --> decorators
+avatar = input<type>() --> signal Input
+
+
 
 
 
