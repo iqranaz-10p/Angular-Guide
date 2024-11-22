@@ -6,16 +6,17 @@
         <app-user
           [user]="user"
           (select)="onSelectUser($event)"
+          [selected]="user.id === selectedUserId"
         />
       </li>
     <!-- } -->
   </ul>
   <!-- @if (selectedUser) { -->
-    <app-tasks *ngIf="selectedUser; else fallback" [name]="selectedUser!.name"/>
+    <app-tasks *ngIf="selectedUser; else fallback" [userId]="selectedUser.id" [name]="selectedUser!.name"/>
   <!-- } @else {
     <p>Please select a user</p>
   } -->
     <ng-template #fallback>
-      <p>Please select a user</p>
+      <h2>Please select a user</h2>
     </ng-template>
 </main>
