@@ -24,6 +24,9 @@ now it will be called as imagePath()
 @Input() @Component --> decorators
 avatar = input<type>() --> signal Input
 
+! ==> add this to convince angular that value will not be undefined
+
+to create new component --> ng g c <component name> --skip-tests (this will not create test file)
 
 
 
