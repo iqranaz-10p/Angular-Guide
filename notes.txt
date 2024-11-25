@@ -28,6 +28,8 @@ avatar = input<type>() --> signal Input
 
 to create new component --> ng g c <component name> --skip-tests (this will not create test file)
 
+directives --> ngModel --> angular powered element enhancements helps to access input of user 
 
+pipe can be used to transform data like {{ dueDate | date: 'fullDate' }}
 
 
