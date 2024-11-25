@@ -4,6 +4,7 @@ import { DUMMY_TASKS } from '../dummy-tasks';
 import { NgFor, NgIf } from '@angular/common';
 import { Task, TaskData } from './task/task.model';
 import { NewTaskComponent } from "./new-task/new-task.component";
+import { TaskServices } from './tasks.service';
 
 @Component({
   selector: 'app-tasks',
@@ -18,8 +19,12 @@ export class TasksComponent {
   tasks = DUMMY_TASKS;
   isAddingTask: boolean = false;
 
+  constructor(private taskService: TaskServices) {
+    this.taskService = taskService;
+  } //dependency injection
+
   get selectedUserTasks() {
-    return this.tasks.filter((task) => task.userId === this.userId);
+    return this.taskService.getUserTasks(this.userId);
   }
 
   onCompleteTask(id: string) {
@@ -34,16 +39,7 @@ export class TasksComponent {
     this.isAddingTask = true;
   }
 
-  onCancelAddTask() {
-    this.isAddingTask = false;
-  }
-
-  onAddTask(taskData: TaskData) {
-    this.tasks.unshift({
-      id: new Date().getTime().toString(),
-      userId: this.userId,
-      ...taskData
-    })
+  onCloseAddTask() {
     this.isAddingTask = false;
   }
 }

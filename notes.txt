@@ -32,4 +32,7 @@ directives --> ngModel --> angular powered element enhancements helps to access 
 
 pipe can be used to transform data like {{ dueDate | date: 'fullDate' }}
 
+Dependency Injection --. we don't create class instance instead we ask angular to create one and can be use this at multiple places
+
+
 
