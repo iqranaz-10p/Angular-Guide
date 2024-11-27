@@ -36,3 +36,29 @@ Dependency Injection --. we don't create class instance instead we ask angular t
 
 
 
+************** Section3 / Angular Modules *********************
+
+NgModule --> standalone components are recommended way of building components but can still use 
+angular-based module (make components available to eachother) to building components
+
+when working with modules don't need import array
+
+create app.module.ts file
+use NgModule decorator with declarations
+
+if using component in module remove or make standalone false
+import array in component is only valid if its standalone
+
+update main.ts add declarations and imports
+
+standalone and NgModule can be used together
+
+modules helps to keep all components together
+
+we can also create shared modules
+
+
+
+
+
+

@@ -3,7 +3,7 @@ import { type User } from './user.model';
 
 @Component({
   selector: 'app-user',
-  standalone: true,
+  // standalone: true,
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss'
 })
