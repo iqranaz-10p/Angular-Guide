@@ -1,0 +1,7 @@
+
+*********************************** Section6 / Components and Templates ****************************************
+
+---- content projection
+angular doesnot render wrapped Components
+use <ng-content /> in parent Component to make it render wrapped child Component
+
