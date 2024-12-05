@@ -10,3 +10,12 @@ use <ng-content /> in parent Component to make it render wrapped child Component
 --- in property binding it looks for typescript code inside ""
 
 attribute selector ---> unclear
+ngProjectAs  ---> unclear //use for selector and avoids duplication/ wrapping
+
+ViewEncapsulation --> core angular thing 
+Shadow DOM --> attach hidden DOM structures to DOM elements
+
+Host element -->  Component with selector 
+@HostBinding --> take the property name and bind it to the host element as value for that property
+ElementRef injecting --> unclear
+
