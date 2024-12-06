@@ -19,3 +19,12 @@ Host element -->  Component with selector
 @HostBinding --> take the property name and bind it to the host element as value for that property
 ElementRef injecting --> unclear
 
+angular class binding --->  <div [class.status]="currentStatus === 'offline'">  single class dynamically
+
+[class]="{
+        status: true,
+        'status-online': currentStatus === 'online',
+        'status-offline': currentStatus === 'offline',
+        'status-unknown': currentStatus === 'unknown'
+      }" --> multi class binding
+
