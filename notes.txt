@@ -1,0 +1,21 @@
+directives ---> enhancement to elements
+types --> attribute directive (built-in ngModel)
+          structural directive (built-in ngIf)
+
+custom directive
+    inject 
+    @Directive({
+        selector: 'component[directive name]' --> selector: 'a[appAuth]'
+    })
+
+    have constructor
+    can have some functions trigerred on events
+    can have inputs
+
+effect(()={}) --> angular core and works if something changes
+
+can be standalone and if using module will be exported and imported through modules
+
+inject templateRef and viewContainerRef if using structural directive --> it mentions where to render what
+
+
