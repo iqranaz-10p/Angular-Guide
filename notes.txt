@@ -2,3 +2,10 @@ pipes transform the way data is displayed
 
 built-in pipes (currency, date etc)
 
+pure: false --> ????
+Pure pipes are designed to be stateless, meaning that they don’t have any internal state that could affect their output.
+Instead, they take input data and return transformed output data. Pure pipes are also memoized, which means that if the input data hasn’t changed since the last time the pipe was called, the pipe won’t be executed again.
+
+limitation:
+Avoid chaining too many pipes and be mindful of heavy calculations within pipes, as these can impact performance.
+Additionally, consider using pure pipes and testing your custom pipes thoroughly to ensure they’re working as expected.
