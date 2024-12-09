@@ -5,7 +5,9 @@ import { Task } from "./task.model";
     providedIn: 'root'
 })
 export class TaskService {
-    tasks = signal<Task[]>([]);
+    private tasks = signal<Task[]>([]);
+
+    allTasks = this.tasks.asReadonly(); //clear seperation of data so that it could not be changed from outside
 
   addTask(taskData: { title: string; description: string }) {
     this.tasks.update((oldTasks) => {
@@ -16,6 +18,21 @@ export class TaskService {
         };
 
         return [...oldTasks, newTask];
+    });
+  }
+
+  updateTaskStatus(taskId: string, newStatus: 'OPEN' | 'IN_PROGRESS' | 'DONE') {
+    this.tasks.update((oldTasks) => {
+        return oldTasks.map((task) => {
+            if(task.id === taskId) {
+                return {
+                    ...task,
+                    status: newStatus
+                };
+            }
+
+            return task;
+        });
     });
   }
 }
