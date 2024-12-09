@@ -1,0 +1,4 @@
+pipes transform the way data is displayed
+
+built-in pipes (currency, date etc)
+
