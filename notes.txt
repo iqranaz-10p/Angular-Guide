@@ -28,3 +28,40 @@ angular class binding --->  <div [class.status]="currentStatus === 'offline'">  
         'status-unknown': currentStatus === 'unknown'
       }" --> multi class binding
 
+
+
+------------------ Components LifeCycle ---------------------------
+
+https://angular.dev/guide/components/lifecycle
+
+1. ngOnInit 
+--> when component is initialized
+keep constructor for important tasks only
+put http requests and other initialization in ngOnInit
+if any error it will not be triggered and tough to debug
+to overcome this use implements OnInit interface on class to force it to call in anycase
+
+2. ngOnDestroy
+--> when component disappears 
+does some cleanup work right before component removes
+
+3. ngOnChanges
+--> when component input values changes  
+
+4. ngDoCheck
+--> angular change detection mechanism
+whenever angular thinks any change detection is required anywhere in application
+
+5. ngAfterContentInit
+
+6. ngAfterContentChecked
+
+7. ngAfterViewInit
+
+8. ngAfterViewChecked
+
+
+view --> template or html code --> internally managed data structures that holds reference to DOM elements
+content --> <ng-content/> --> some partial view projected in components view
+
+
