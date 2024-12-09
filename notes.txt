@@ -1,0 +1,11 @@
+can separate logics and methods that can be shared among components into services
+
+these are injectable
+
+to use in components, first create instance and add into constructor
+
+
+Dependency Injection
+    not only for services but can be used for other
+    don't create instance yourself, request angular to create it for yourself
+
