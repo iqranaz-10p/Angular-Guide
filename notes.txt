@@ -1,0 +1,29 @@
+Change detection in Angular
+    Default 
+    OnPush
+
+renders twice as check errors and renders again
+
+ExpressionChangedAfterCheckedErrors if something changes in between rendering and error checking
+
+
+changeDetection: ChangeDetectionStrategy.OnPush,
+OnPush strategy helps for change detection on components
+it tells components that it well re-render component and its child components only if input values changes or any event occurs
+if child is rendering unnecessary due to parent add changeDetection on child separately
+
+if component have no events or signals, it will not trigger changeDetection. 
+in this case do it manually or use RxJS (observables)
+
+changeDetectorRef ---> manually trigger changeDetector
+
+******** Async Pipe ***********
+async builtin pipe in Angular
+anguale subscribe subjects and observe changes and trigger changeDetection if value changes
+
+
+RxJS ---> messages$ ---> $ is used for RxJS variables
+
+
+zone.js --> notifies Angular about user event and expired timers
+
