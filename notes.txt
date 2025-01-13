@@ -1,0 +1,5 @@
+RxJS is independant library used by Angular
+Observables are introduced by RxJS
+
+
+
