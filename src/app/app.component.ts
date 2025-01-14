@@ -7,12 +7,12 @@ import { interval, map } from 'rxjs';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-  clickCount = signal(0);
-  private destroyRef = inject(DestroyRef);
+  clickCount = signal(0); //signals are reactive variables that can be used to store and update values
+  // private destroyRef = inject(DestroyRef);
 
   constructor() {
     effect(() => {
-      console.log('click button:', this.clickCount());
+      console.log('click button:', this.clickCount()); //effect is a function that will be called whenever the value of the signal changes
     });
   }
 
@@ -27,6 +27,10 @@ export class AppComponent implements OnInit {
     // this.destroyRef.onDestroy(() => {
     //   subscription.unsubscribe();
     // });
+  }
+
+  onClick() {
+    this.clickCount.update(prevCount => prevCount + 1); //using signals
   }
 }
   
